@@ -1,30 +1,40 @@
-const Navbar = () =>{
-    return(
-        <div className="Navbar lg:h-[15%] lg:flex w-full font-bold h-[50%]  ">
-            <div className=" lg:h-full lg:w-[25%] lg:justify-center flex  items-center text-[24px] font-bold pl-[20px]w-full h-[30%]" >
-                <img className=" h-[100px] w-[100px] " src="./img/chef1.png" alt=""/>
-                <a href="/" className="cursor-pointer">Khana <p className=" text-[#F85A02]  " >Khajana</p></a>
-                
-            </div>
-            
-            <div className=" lg:h-full lg:w-[50%] lg:flex lg:justify-center lg:items-center w-full h-[50%] text-[18px] ">
-                <div className="h-full w-full lg:flex lg:flex-row justify-around items-center flex flex-col mb-[20px] lg:mb-0" >
-                    
-                    <a className="hover:text-[#F85A02] mt-[10px] lg:mt-0" href="/">Home</a>
-                    <a className="hover:text-[#F85A02] mt-[10px] lg:mt-0" href="/">About</a>
-                    <a className="hover:text-[#F85A02] mt-[10px] lg:mt-0" href="/">Products</a>
-                    <a className="hover:text-[#F85A02] mt-[10px] lg:mt-0" href="/">Contact Us</a>
-                </div>
-            </div>
-            <div className="lg:h-full lg:w-[25%] h-[20%] w-full flex lg:justify-center lg:items-center text-[18px] mt-[10px] lg:mt-0 ">
-                <div className="flex h-full w-full lg:justify-center items-center justify-around ">
-                    <a className="  flex h-[40px] w-[110px] rounded-[20px] justify-center items-center bg-[#F85A02] text-white hover:text-[#F85A02] hover:bg-white lg:text-[#000000] lg:flex lg:bg-white" href="/">Sign in</a>
+import {useState} from 'react'
 
-                    <div className="flex h-[40px] w-[110px] rounded-[20px] justify-center items-center bg-[#F85A02] text-white hover:text-[#F85A02] hover:bg-white" >
+const Navbar = () =>{
+    let[open,setOpen]=useState(false);
+    return(
+        <div className="Navbar font-bold md:w-full md:h-[15%]  md:m-0 md:p-0 md:flex h-[50%] w-full flex flex-col md:flex-row" >
+            <div className="md:h-full md:w-[20%]  md:flex md:items-center md:m-0 md:p-0 h-[30%] w-full flex items-center  justify-between" >
+                <div className="md:h-full md:w-[50%] flex items-center">
+                    <img className=" h-[100px] w-[100px] md:m-0 md:p-0 " src="./img/chef1.png" alt=""/>
+                    <a href="/" className="cursor-pointer text-[20px] text-center">Khana <p className=" text-[#F85A02]  " >Khajana</p></a>
+                </div>
+                <div onClick={()=>setOpen(!open)} className="h-[50px] w-[50px] md:hidden text-4xl flex items-center">
+                
+                <span ><ion-icon name={open ? 'close' : 'menu'}></ion-icon></span>
+                </div>
+            </div> 
+            
+            <div  className={`h-[70%] w-[full]  flex-col md:h-full md:w-[80%] md:flex md:flex-row md:text-[18px]   
+            ${open ? 'top-20 opacity-100' : 'top-[490px]'} md:opacity-100 opacity-0 `}>
+                
+                <div className="w-full h-[65%] flex flex-col justify-around items-center text-[18px] md:h-full md:w-[75%] md:flex  md:justify-around md:items-center md:flex-row " >
+                    <a href="/" className="hover:text-[#F85A02]" >Home</a>
+                    <a href="/" className="hover:text-[#F85A02]" >About</a>
+                    <a href="/" className="hover:text-[#F85A02]" >Products</a>
+                    <a href="/" className="hover:text-[#F85A02]" >Contact Us</a>
+                </div>
+                
+                <div className=" w-full flex justify-around items-center md:h-full md:w-[25%] md:flex md:flex-col lg:justify-center md:items-center lg:flex-row lg:pr-[10px] h-[35%] md:justify-around " >
+                    <div className="flex md:h-[35px] md:w-[90px] rounded-[20px] justify-center items-center bg-[#F85A02] text-white hover:text-[#F85A02] hover:bg-white  lg:bg-white lg:text-black h-[40px] w-[110px] " >
+                        <a  href="/">Sign in</a>
+                    </div>
+                    <div className="flex md:h-[35px] md:w-[90px] rounded-[20px] justify-center items-center bg-[#F85A02] text-white hover:text-[#F85A02] hover:bg-white lg:h-[40px] lg:w-[110px] h-[40px] w-[110px]" >
                         <a  href="/">Sign up</a>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
