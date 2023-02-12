@@ -3,7 +3,7 @@ import {useState} from 'react'
 const Navbar = () =>{
     let[open,setOpen]=useState(false);
     return(
-        <div className="Navbar font-bold md:w-full md:h-[15%]  md:m-0 md:p-0 md:flex h-[50%] w-full flex flex-col md:flex-row" >
+        <div className="Navbar font-bold md:w-full min-h-[15%]  md:m-0 md:p-0 md:flex  w-full flex flex-col md:flex-row md:justify-center md:items-center" >
             <div className="md:h-full md:w-[20%]  md:flex md:items-center md:m-0 md:p-0 h-[30%] w-full flex items-center  justify-between" >
                 <div className="md:h-full md:w-[50%] flex items-center">
                     <img className=" h-[100px] w-[100px] md:m-0 md:p-0 pt-[10px] " src="./img/chef1.png" alt=""/>
@@ -15,8 +15,8 @@ const Navbar = () =>{
                 </div>
             </div> 
             
-            <div  className={`h-[70%] w-full  flex-col  md:h-full md:w-[80%] md:flex md:flex-row md:text-[18px]   
-                ${open ? 'block' : 'hidden'}`}>
+            <div  className={`h-[70%] w-full  flex-col  md:h-full md:w-[80%] md:flex md:flex-row  md:text-[18px]   
+                ${open ? 'block' : 'hidden'} md:justify-center md:items-center` }>
                 
                 <div className="w-full h-[65%] flex flex-col justify-around items-center text-[18px] md:h-full md:w-[75%] md:flex  md:justify-around md:items-center md:flex-row " >
                     <a href="/" className="hover:text-[#F85A02]" >Home</a>
