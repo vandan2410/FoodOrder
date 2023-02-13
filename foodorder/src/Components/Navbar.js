@@ -20,13 +20,13 @@ const Navbar = () =>{
                 
                 <div className="w-full h-[65%] flex flex-col justify-around items-center text-[18px] md:h-full md:w-[75%] md:flex  md:justify-around md:items-center md:flex-row " >
                     <a href="/" className="hover:text-[#F85A02]" >Home</a>
-                    <a href="/" className="hover:text-[#F85A02]" >About</a>
+                    <a href="/" className="hover:text-[#F85A02]" >Category</a>
                     <a href="/" className="hover:text-[#F85A02]" >Products</a>
                     <a href="/" className="hover:text-[#F85A02]" >Contact Us</a>
                 </div>
                 
                 <div className=" w-full flex justify-around items-center md:h-full md:w-[25%] md:flex md:flex-col lg:justify-center md:items-center lg:flex-row lg:pr-[10px] h-[35%] md:justify-around " >
-                    <div className="flex md:h-[35px] md:w-[90px] rounded-[20px] justify-center items-center bg-[#F85A02] text-white hover:text-[#F85A02] hover:bg-white  lg:bg-white lg:text-black h-[40px] w-[110px] " >
+                    <div className="flex md:h-[35px] md:w-[90px] rounded-[20px] justify-center items-center bg-[#F85A02] text-white hover:text-[#F85A02] hover:bg-white  lg:bg-white lg:text-black h-[40px] w-[110px] mr-[10px] " >
                         <a  href="/">Sign in</a>
                     </div>
                     <div className="flex md:h-[35px] md:w-[90px] rounded-[20px] justify-center items-center bg-[#F85A02] text-white hover:text-[#F85A02] hover:bg-white lg:h-[40px] lg:w-[110px] h-[40px] w-[110px]" >
